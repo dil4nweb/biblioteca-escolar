@@ -1,0 +1,49 @@
+/* Variables del Tema de Bootstrap Personalizado */
+:root {
+    --bs-primary: #2c3e50;
+    --bs-primary-dark: #1a252f;
+    --bs-secondary: #e74c3c;
+    --bs-success: #27ae60;
+    --bs-info: #3498db;
+    --bs-warning: #f39c12;
+    --bs-danger: #c0392b;
+    --bs-body-font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system;
+    --bs-heading-font-weight: 600;
+}
+
+body { 
+    background-color: #f8f9fa;
+    font-family: var(--bs-body-font-family);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--bs-primary-dark);
+    border-color: var(--bs-primary-dark);
+}
+
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 576px) {
+    .card-header h5 { font-size: 1rem; }
+    .card-body { padding: 0.75rem; }
+    .btn-sm { font-size: 0.75rem; padding: 0.25rem 0.5rem; }
+}
